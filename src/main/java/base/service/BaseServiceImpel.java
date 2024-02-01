@@ -12,15 +12,12 @@ public class BaseServiceImpel <ID extends Serializable, TYPE extends BaseEntity<
     public BaseServiceImpel(R repository) {
         this.repository = repository;
     }
-
     @Override
     public void save(TYPE entity) {
         repository.save(entity);
-
     }
-
     @Override
     public TYPE findById(ID id) {
-        return null;
+        return repository.findById(id);
     }
 }
